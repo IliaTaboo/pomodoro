@@ -1,0 +1,109 @@
+@import 'base.scss';
+@import 'vars.scss';
+
+.logo {
+  font-size: 2.5em;
+}
+
+.btn {
+  color: $default-color;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid $white;
+  border-radius: 2px;
+  opacity: 1;
+  transition: opacity 2s;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover, &:active {
+    background-image: $btn-hover-gradient;
+  }
+
+  &:active {
+    background-image: $btn-active-gradient;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    transition: opacity 2s;
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.type-btn {
+  min-width: 188px;
+  display: inline-block;
+  font-size: 22px;
+}
+
+.timer-countdoun {
+  font-size: 5em;
+}
+
+.control-btn {
+  min-width: 144px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &-heading {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  &-block {
+    border-radius: 2px;
+    margin: 1rem;
+    position: relative;
+    height: 100%;
+    width: 300px;
+    padding-bottom: 10px;
+    box-shadow: $block-box-shadow;
+    border: $block-border;
+  }
+}
+
+.settings {
+  &-time {
+    &-heading {
+      text-align: center;
+      margin: 5px 0;
+    }
+
+    &-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-btn {
+        background-color: Transparent;
+        border: none;
+        cursor:pointer;
+        outline:none;
+        color: $white;
+        font-size: 24px;
+        margin: 0 10px;
+
+        &:active {
+          transform: scale(1.2); 
+        }
+      }
+    }
+  }
+}
+
+@import 'media.scss';

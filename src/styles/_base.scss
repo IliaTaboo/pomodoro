@@ -1,0 +1,38 @@
+@import 'vars.scss';
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: $background-gradient;
+  background-attachment: fixed;
+  font-family: $default-font-family;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $default-color;
+}
+
+li {
+  margin: 10px 0;
+}
+
+strong {
+  text-transform: uppercase;
+}
+
+th, td {
+  text-align: center;
+}
+

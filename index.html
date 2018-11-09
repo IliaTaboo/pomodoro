@@ -5,9 +5,71 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-  <h1>Pomodoro timer</h1>
+  <h1 class="logo">Pomodoro timer</h1>
+  <div class="type">
+    <button class="btn type-btn">Pomodoro</button>
+    <button class="btn type-btn">Break</button>
+  </div>
+  <div class="timer">
+    <h2 class="timer-countdoun">25:00</h2>
+  </div>
+  <div class="control">
+    <button class="btn control-btn">Start</button>
+    <button class="btn control-btn">Stop</button>
+    <button class="btn control-btn">Reset</button>
+  </div>
+  <div class="features-container">
+    <div class="shortcuts features-container-block hide-mobile">
+      <h3 class="features-container-heading">Keyboard shortcuts:</h3>
+      <ul>
+        <li><strong>space </strong>Start/Stop the timer</li>
+        <li><strong>alt + p </strong>Pomodoro</li>
+        <li><strong>alt + b </strong>Break</li>
+        <li><strong>alt + r </strong>Reset Timer</li>
+      </ul>
+    </div>
+    <div class="history features-container-block hide-mobile">
+      <h3 class="features-container-heading">History</h3>
+      <table style="width:100%">
+        <tr>
+          <th>Type</th>
+          <th>Lenght</th> 
+          <th>Started</th>
+        </tr>
+        <tr>
+          <td>Pomodoro</td>
+          <td>25:00</td> 
+          <td>11:00 PM</td>
+        </tr>
+        <tr>
+          <td>Break</td>
+          <td>5:00</td> 
+          <td>12:00 PM</td>
+        </tr>
+      </table>
+    </div>
+    <div class="settings features-container-block">
+      <h3 class="features-container-heading">Set custom times</h3>
+      <div class="settings-time">
+        <h4 class="settings-time-heading">Session Length</h4>
+        <div class="settings-time-controls">
+          <button class="settings-time-controls-btn">-</button>
+          <span class="settings-time-controls-value">25</span>
+          <button class="settings-time-controls-btn">+</button>
+        </div>
+      </div>
+      <div class="settings-time">
+        <h4 class="settings-time-heading">Break Length</h4>
+        <div class="settings-time-controls">
+          <button class="settings-time-controls-btn">-</button>
+          <span class="settings-time-controls-value">5</span>
+          <button class="settings-time-controls-btn">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
