@@ -27,6 +27,7 @@
 
 ## TODO
 
-* Provide maximum unit tests coverage
-* Add offline support
-* Add adaptive design for mobile devices
+- [ ] Provide maximum unit tests coverage
+- [x] Add offline support
+- [x] Add adaptive design for mobile devices
+- [ ] Add pomodoro history feature
