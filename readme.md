@@ -31,3 +31,4 @@
 - [x] Add offline support
 - [x] Add adaptive design for mobile devices
 - [ ] Add pomodoro history feature
+- [x] Add keyboard shortcuts
