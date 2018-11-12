@@ -9,17 +9,14 @@
 </head>
 <body>
   <h1 class="logo">Pomodoro timer</h1>
-  <div class="type">
-    <button class="btn type-btn">Pomodoro</button>
-    <button class="btn type-btn">Break</button>
-  </div>
+  <button class="btn type-btn" id="change-timer">Pomodoro / Break</button>
   <div class="timer">
-    <h2 class="timer-countdoun">25:00</h2>
+    <h2 class="timer-countdown" id="countdown"></h2>
   </div>
   <div class="control">
-    <button class="btn control-btn">Start</button>
-    <button class="btn control-btn">Stop</button>
-    <button class="btn control-btn">Reset</button>
+    <button class="btn control-btn" id="start">Start</button>
+    <button class="btn control-btn" id="stop">Stop</button>
+    <button class="btn control-btn" id="reset">Reset</button>
   </div>
   <div class="features-container">
     <div class="shortcuts features-container-block hide-mobile">
@@ -33,43 +30,38 @@
     </div>
     <div class="history features-container-block hide-mobile">
       <h3 class="features-container-heading">History</h3>
-      <table style="width:100%">
+      <table  class="data-table">
+        <thead>
         <tr>
-          <th>Type</th>
-          <th>Lenght</th> 
-          <th>Started</th>
+          <th class="data-table__cell">Start Time</th>
+          <th class="data-table__cell">End Time</th>
+          <th class="data-table__cell">Type</th>
         </tr>
-        <tr>
-          <td>Pomodoro</td>
-          <td>25:00</td> 
-          <td>11:00 PM</td>
-        </tr>
-        <tr>
-          <td>Break</td>
-          <td>5:00</td> 
-          <td>12:00 PM</td>
-        </tr>
+        </thead>
+        <tbody class="table-body">
+        </tbody>
       </table>
     </div>
     <div class="settings features-container-block">
       <h3 class="features-container-heading">Set custom times</h3>
-      <div class="settings-time">
+      <div class="settings-time" id="session-setting">
         <h4 class="settings-time-heading">Session Length</h4>
         <div class="settings-time-controls">
-          <button class="settings-time-controls-btn">-</button>
-          <span class="settings-time-controls-value">25</span>
-          <button class="settings-time-controls-btn">+</button>
+          <button class="decrement">-</button>
+          <p class="decrement settings-time-controls-value" id="session-length"></p>
+          <button class="increment">+</button>
         </div>
       </div>
-      <div class="settings-time">
+      <div class="settings-time" id="break-setting">
         <h4 class="settings-time-heading">Break Length</h4>
         <div class="settings-time-controls">
-          <button class="settings-time-controls-btn">-</button>
-          <span class="settings-time-controls-value">5</span>
-          <button class="settings-time-controls-btn">+</button>
+          <button class="decrement">-</button>
+          <p class="decrement settings-time-controls-value" id="break-length"></p>
+          <button class="increment">+</button>
         </div>
       </div>
     </div>
   </div>
+  <audio id="end-sound" src="alarm.mp3"></audio>
 </body>
 </html>

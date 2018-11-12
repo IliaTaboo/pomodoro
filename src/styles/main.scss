@@ -39,12 +39,12 @@
 }
 
 .type-btn {
-  min-width: 188px;
+  min-width: 224px;
   display: inline-block;
   font-size: 22px;
 }
 
-.timer-countdoun {
+.timer-countdown {
   font-size: 5em;
 }
 
@@ -89,7 +89,7 @@
       justify-content: center;
       align-items: center;
 
-      &-btn {
+      .increment, .decrement {
         background-color: Transparent;
         border: none;
         cursor:pointer;

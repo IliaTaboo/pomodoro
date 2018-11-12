@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   background: $background-gradient;
   background-attachment: fixed;
@@ -36,3 +36,10 @@ th, td {
   text-align: center;
 }
 
+table {
+  width: 100%;
+}
+
+.is-hidden {
+  display: none;
+}
