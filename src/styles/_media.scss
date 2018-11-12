@@ -9,4 +9,20 @@
     display: block;
     margin: 5px 0;
   }
+
+  .settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features-container-block {
+    border-radius: unset;
+    box-shadow: unset;
+    border: unset;
+  }
+
+  .settings-time {
+    margin: 0 10px;
+  }
 }
