@@ -1,8 +1,8 @@
 const { assets } = global.serviceWorkerOption;
 
-const appShellFiles = [...assets, './', './alarm.mp3', './styles.css'];
+let appShellFiles = [...assets, './', './static/alarm.mp3', './styles.css'];
 
-const cacheName = `pomodorschmo1-${new Date().toISOString()}`;
+const cacheName = `pomodoro-${new Date().toISOString()}`;
 
 self.addEventListener('install', function (e) {
   e.waitUntil(

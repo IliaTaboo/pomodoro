@@ -44,7 +44,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Pomodoro timer',
-      favicon: path.resolve('./src/static/favicon.ico'),
       template: path.resolve('./index.html')
     }),
     new MiniCssExtractPlugin({
@@ -55,8 +54,8 @@ module.exports = {
       excludes: ['**/.*', '**/*.map', '*.html']
     }),
     new CopyWebpackPlugin([
-      { from: 'src/static/alarm.mp3', to: 'alarm.mp3'},
-      { from: 'src/static/pomodoro.webmanifest', to: 'pomodoro.webmanifest'}
+      { from: 'src/static', to: 'static'},
+      { from: 'src/static/favicon.ico', to: 'favicon.ico'}
     ]),
   ],
   devServer: {
