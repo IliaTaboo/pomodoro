@@ -1,0 +1,16 @@
+{
+  "background_color": "#c63939",
+  "description": "A simple pomodoro timer",
+  "display": "standalone",
+  "theme_color": "#c63939",
+  "icons": [
+      {
+          "src": "/favicon.ico",
+          "sizes": "48x48",
+          "type": "image/x-icon"
+      }
+  ],
+  "name": "Pomodoro Timer",
+  "short_name": "Pomodoro",
+  "start_url": "."
+}

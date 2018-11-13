@@ -55,7 +55,8 @@ module.exports = {
       excludes: ['**/.*', '**/*.map', '*.html']
     }),
     new CopyWebpackPlugin([
-      { from: 'src/static/alarm.mp3', to: 'alarm.mp3'}
+      { from: 'src/static/alarm.mp3', to: 'alarm.mp3'},
+      { from: 'src/static/pomodoro.webmanifest', to: 'pomodoro.webmanifest'}
     ]),
   ],
   devServer: {
