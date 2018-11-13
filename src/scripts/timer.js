@@ -37,7 +37,7 @@ function Timer (
 
   this.updateDisplay = () => {
     $countdownElement.textContent = this.currentTimer.time;
-    document.title = `${this.currentTimer.time} - Pomtime`;
+    document.title = `${this.currentTimer.time} - Pomodoro`;
   };
 
   this.start = () => {
@@ -53,7 +53,7 @@ function Timer (
 
   this.reset = () => {
     if (!this.currentTimer.isRunning) {
-      const newTimer = (this.currentTimer.type === 'Pomodoro') 
+      const newTimer = (this.currentTimer.type === 'Pomodoro')
         ? new Pomodoro(this) 
         : new Break(this);
       this.changeTimer(newTimer, false);
