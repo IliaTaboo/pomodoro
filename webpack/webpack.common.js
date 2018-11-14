@@ -49,13 +49,15 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'styles.css'
     }),
-    new ServiceWorkerWebpackPlugin({
-      entry:  path.join(__dirname, '../src/scripts/sw.js'),
-      excludes: ['**/.*', '**/*.map', '*.html']
-    }),
+    // new ServiceWorkerWebpackPlugin({
+    //   entry: path.join(__dirname, '../src/scripts/sw.js'),
+    //   excludes: ['**/.*', '**/*.map', '*.html']
+    // }),
     new CopyWebpackPlugin([
-      { from: 'src/static', to: 'static'},
-      { from: 'src/static/favicon.ico', to: 'favicon.ico'}
+      { from: 'src/static/assets', to: 'assets'},
+      { from: 'src/static/favicon.ico'},
+      { from: 'src/static/pomodoro.webmanifest'},
+      { from: 'src/scripts/sw.js'}
     ]),
   ],
   devServer: {

@@ -8,17 +8,17 @@
   "start_url": ".",
   "icons": [
     {
-      "src": "/tomato-64.png",
+      "src": "assets/tomato-64.png",
       "sizes": "64x64",
       "type": "image/png"
     },
     {
-        "src": "/tomato-152.png",
+        "src": "assets/tomato-152.png",
         "sizes": "152x152",
         "type": "image/png"
     },
     {
-        "src": "/tomato-512.png",
+        "src": "assets/tomato-512.png",
         "sizes": "512x512",
         "type": "image/png"
     }

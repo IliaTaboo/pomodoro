@@ -1,6 +1,12 @@
-const { assets } = global.serviceWorkerOption;
-
-let appShellFiles = [...assets, './', './static/alarm.mp3', './styles.css'];
+const appShellFiles = [
+  '/pomodoro/',
+  '/pomodoro/assets/alarm.mp3',
+  '/pomodoro/styles.css',
+  '/pomodoro/bundle.js',
+  '/pomodoro/favicon.ico',
+  '/pomodoro/index.html',
+  '/pomodoro/pomodoro.webmanifest'
+];
 
 const cacheName = `pomodoro-${new Date().toISOString()}`;
 

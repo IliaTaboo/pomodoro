@@ -45,7 +45,7 @@ function Timer (
   };
 
   this.stop = () => {
-    const alarm = new Audio('static/alarm.mp3');
+    const alarm = new Audio('assets/alarm.mp3');
     
     if (this.currentTimer.currentTime === 0) alarm.play();
     this.currentTimer.stop();
