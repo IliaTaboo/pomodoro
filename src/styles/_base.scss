@@ -14,14 +14,6 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  background: $background-gradient;
-  background-attachment: fixed;
-  font-family: $default-font-family;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: $default-color;
 }
 
 li {

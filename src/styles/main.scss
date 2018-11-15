@@ -1,6 +1,26 @@
 @import 'base.scss';
 @import 'vars.scss';
 
+body {
+  background-color: $background-color-pomodoro;
+  background-attachment: fixed;
+  font-family: $default-font-family;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $default-color;
+  transition: background-color 1s ease;
+
+  &.pomodoro {
+    background-color: $background-color-pomodoro;
+  }
+
+  &.break {
+    background-color: $background-color-break;
+  }
+}
+
 .logo {
   font-size: 2.5em;
 }

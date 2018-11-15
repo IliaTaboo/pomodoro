@@ -1,9 +1,9 @@
-$background-gradient: linear-gradient(to top, #F44336, #F77066) no-repeat; 
+$background-color-pomodoro: #F54F43;
+$background-color-break: #3d9e40;
 $default-font-family: 'PT Sans', sans-serif;
 $default-color: #F8F8F8;
 $white: #FFFFFF;
 $btn-hover-gradient: linear-gradient(to top,rgba(255,255,255,.15),rgba(255,255,255,.10) 90%);
 $btn-active-gradient: linear-gradient(to top,rgba(255,255,255,.25),rgba(255,255,255,.15) 90%);
-$block-box-shadow: 0 10px 20px rgba(175, 65, 58,.19), 0 6px 6px rgba(175, 65, 58,.23);
-$block-border: 1px solid #E2554A;
-
+$block-box-shadow: 0 10px 20px rgba(100, 100, 100,.15), 0 6px 6px rgba(100, 100, 100,.19);
+$block-border: 1px solid rgba(100, 100, 100,.2);

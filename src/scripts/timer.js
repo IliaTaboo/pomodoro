@@ -33,8 +33,6 @@ function Timer (
     else this.updateDisplay();
   };
 
-
-
   this.updateDisplay = () => {
     $countdownElement.textContent = this.currentTimer.time;
     document.title = `${this.currentTimer.time} - Pomodoro`;
@@ -82,6 +80,8 @@ function Pomodoro (timer) {
       this.timer.updateDisplay();
 
     }, 1000);
+    document.body.classList.remove('break');
+    document.body.classList.add('pomodoro');
   };
 
   this.stop = () => {
@@ -112,6 +112,8 @@ function Break (timer) {
       this.timer.updateDisplay();
 
     }, 1000);
+    document.body.classList.remove('pomodoro');
+    document.body.classList.add('break');
   };
 
   this.stop = () => {
