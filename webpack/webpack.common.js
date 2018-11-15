@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -49,10 +48,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'styles.css'
     }),
-    // new ServiceWorkerWebpackPlugin({
-    //   entry: path.join(__dirname, '../src/scripts/sw.js'),
-    //   excludes: ['**/.*', '**/*.map', '*.html']
-    // }),
     new CopyWebpackPlugin([
       { from: 'src/static/assets', to: 'assets'},
       { from: 'src/static/favicon.ico'},
