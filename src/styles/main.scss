@@ -109,7 +109,7 @@ body {
       justify-content: center;
       align-items: center;
 
-      .increment, .decrement {
+      &-btn {
         background-color: Transparent;
         border: none;
         cursor:pointer;
@@ -119,8 +119,13 @@ body {
         margin: 0 10px;
 
         &:active {
-          transform: scale(1.2); 
+          transform: scale(1.2);
         }
+      }
+
+      &-value {
+        margin: 0;
+        font-size: 24px;
       }
     }
   }

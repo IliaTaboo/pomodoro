@@ -21,7 +21,7 @@
   </div>
   <div class="control">
     <button class="btn control-btn" id="start">Start</button>
-    <button class="btn control-btn" id="stop">Stop</button>
+    <button class="btn control-btn" id="stop" disabled>Stop</button>
     <button class="btn control-btn" id="reset">Reset</button>
   </div>
   <div class="features-container">
@@ -47,22 +47,22 @@
         </tbody>
       </table>
     </div>
-    <div class="settings features-container-block">
+    <div class="settings features-container-block" id="settings">
       <h3 class="features-container-heading hide-mobile">Set custom times</h3>
       <div class="settings-time" id="session-setting">
         <h4 class="settings-time-heading">Session Length</h4>
         <div class="settings-time-controls">
-          <button class="decrement">-</button>
+          <button class="decrement btn settings-time-controls-btn">-</button>
           <p class="decrement settings-time-controls-value" id="session-length"></p>
-          <button class="increment">+</button>
+          <button class="increment btn settings-time-controls-btn">+</button>
         </div>
       </div>
       <div class="settings-time" id="break-setting">
         <h4 class="settings-time-heading">Break Length</h4>
         <div class="settings-time-controls">
-          <button class="decrement">-</button>
+          <button class="decrement btn settings-time-controls-btn">-</button>
           <p class="decrement settings-time-controls-value" id="break-length"></p>
-          <button class="increment">+</button>
+          <button class="increment btn settings-time-controls-btn">+</button>
         </div>
       </div>
     </div>

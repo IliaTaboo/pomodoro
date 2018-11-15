@@ -1,7 +1,11 @@
 import registerSW from './registerServiceWorker.js';
 import storeService from './storeService.js';
 import observable from './observable.js';
-import { updateSessionLengthDisplay, updateBreakLengthDisplay, updateSetting } from './methods.js';
+import {
+  updateSessionLengthDisplay,
+  updateBreakLengthDisplay,
+  updateSetting
+} from './updateSetting.js';
 import Timer from './timer.js';
 
 import '../styles/main.scss';
@@ -16,10 +20,10 @@ function settingsChange (e) {
   if (e.target.nodeName === 'BUTTON' && !AppTimer.isRunning()) {
     switch (this.id) {
       case 'session-setting':
-        updateSetting(sessionLength, e.target.className);
+        updateSetting(sessionLength, e.target.classList[0]);
         break;
       case 'break-setting':
-        updateSetting(breakLength, e.target.className);
+        updateSetting(breakLength, e.target.classList[0]);
         break;
       default:
         break;
@@ -29,6 +33,16 @@ function settingsChange (e) {
 
 function timerToggleHandler () {
   AppTimer.toggleTimer();
+}
+
+function disableBtn (disable) {
+  const $buttons = document.getElementsByClassName('btn');
+  
+  for (let i = 0; i < $buttons.length; i++) {
+    $buttons[i].disabled = disable;
+  }
+
+  $stopBtn.disabled = !disable;
 }
 
 const sessionLength = observable();
@@ -53,10 +67,12 @@ $timerSettings.forEach(el => {
 
 $startBtn.addEventListener('click', function () {
   AppTimer.start();
+  disableBtn(true);
 });
 
 $stopBtn.addEventListener('click', function () {
   AppTimer.stop();
+  disableBtn(false);
 });
 
 document.onkeyup = function (e) {
