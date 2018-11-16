@@ -1,4 +1,4 @@
-const SettingsStore = (function () {
+const SettingsStore = ( () => {
   if (!localStorage.getItem('sessionLength')) localStorage.setItem('sessionLength', '25');
   if (!localStorage.getItem('breakLength')) localStorage.setItem('breakLength', '5');
 

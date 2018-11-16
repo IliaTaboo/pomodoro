@@ -1,7 +1,7 @@
 import { formatTime } from './timeFormat.js';
 
 function Timer (
-  $countdownElement = document.getElementById('countdown')
+  $countdownElement
 ) {
   this.sessionDuration;
   this.breakDuration;

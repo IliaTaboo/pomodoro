@@ -6,6 +6,7 @@ import {
   updateBreakLengthDisplay,
   updateSetting
 } from './updateSetting.js';
+import { disableBtn } from './utils.js';
 import Timer from './timer.js';
 
 import '../styles/main.scss';
@@ -15,35 +16,7 @@ const $startBtn = document.getElementById('start');
 const $stopBtn = document.getElementById('stop');
 const $resetBtn = document.getElementById('reset');
 const $timerToggleBtn = document.getElementById('change-timer');
-
-function settingsChange (e) {
-  if (e.target.nodeName === 'BUTTON' && !AppTimer.isRunning()) {
-    switch (this.id) {
-      case 'session-setting':
-        updateSetting(sessionLength, e.target.classList[0]);
-        break;
-      case 'break-setting':
-        updateSetting(breakLength, e.target.classList[0]);
-        break;
-      default:
-        break;
-    }
-  }
-}
-
-function timerToggleHandler () {
-  AppTimer.toggleTimer();
-}
-
-function disableBtn (disable) {
-  const $buttons = document.getElementsByClassName('btn');
-  
-  for (let i = 0; i < $buttons.length; i++) {
-    $buttons[i].disabled = disable;
-  }
-
-  $stopBtn.disabled = !disable;
-}
+const $countdownElement = document.getElementById('countdown');
 
 const sessionLength = observable();
 const breakLength = observable();
@@ -54,7 +27,7 @@ breakLength.subscribe(updateBreakLengthDisplay);
 sessionLength.subscribe(storeService.session);
 breakLength.subscribe(storeService.break);
 
-const AppTimer = new Timer();
+const AppTimer = new Timer($countdownElement);
 
 sessionLength.subscribe(AppTimer.setSessionDuration);
 sessionLength(storeService.session());
@@ -62,32 +35,47 @@ breakLength.subscribe(AppTimer.setBreakDuration);
 breakLength(storeService.break());
 
 $timerSettings.forEach(el => {
-  el.addEventListener('click', settingsChange);
+  el.addEventListener('click', function (e) {
+    if (e.target.nodeName === 'BUTTON' && !AppTimer.isRunning()) {
+      switch (this.id) {
+        case 'session-setting':
+          updateSetting(sessionLength, e.target.classList[0]);
+          break;
+        case 'break-setting':
+          updateSetting(breakLength, e.target.classList[0]);
+          break;
+        default:
+          break;
+      }
+    }
+  });
 });
 
-$startBtn.addEventListener('click', function () {
+$startBtn.addEventListener('click', () => {
   AppTimer.start();
-  disableBtn(true);
+  disableBtn(true, 'btn', $stopBtn);
 });
 
-$stopBtn.addEventListener('click', function () {
+$stopBtn.addEventListener('click', () => {
   AppTimer.stop();
-  disableBtn(false);
+  disableBtn(false, 'btn', $stopBtn);
 });
 
-document.onkeyup = function (e) {
+document.addEventListener('keyup', e => {
   if (e.which === 32 && !AppTimer.isRunning()) {
     AppTimer.start();
+    disableBtn(true, 'btn', $stopBtn);
   } else if (e.which === 32 && AppTimer.isRunning()) {
     AppTimer.stop();
+    disableBtn(false, 'btn', $stopBtn);
   } else if (e.altKey && e.which === 80) {
-    timerToggleHandler();
+    AppTimer.toggleTimer();
   } else if (e.altKey && e.which === 82) {
     AppTimer.reset();
   }
-};
+});
 
 $resetBtn.addEventListener('click', () => AppTimer.reset());
-$timerToggleBtn.addEventListener('click', timerToggleHandler);
+$timerToggleBtn.addEventListener('click', () => AppTimer.toggleTimer());
 
 registerSW();
