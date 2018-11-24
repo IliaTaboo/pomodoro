@@ -33,7 +33,7 @@ body {
   border: 2px solid $default-color;
   border-radius: 2px;
   opacity: 1;
-  transition: opacity 2s;
+  transition: opacity .3s;
 
   &:last-of-type {
     margin-right: 0;
@@ -52,7 +52,7 @@ body {
   }
 
   &:disabled {
-    transition: opacity 2s;
+    transition: opacity .3s;
     opacity: 0.4;
     cursor: not-allowed;
   }
