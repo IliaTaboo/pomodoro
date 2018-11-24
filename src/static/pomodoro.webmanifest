@@ -1,8 +1,8 @@
 {
-  "background_color": "#c63939",
+  "background_color": "#B30F0A",
   "description": "A simple pomodoro timer",
   "display": "standalone",
-  "theme_color": "#c63939",
+  "theme_color": "#474C4F",
   "name": "Pomodoro Timer",
   "short_name": "Pomodoro",
   "start_url": ".",
