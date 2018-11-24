@@ -1,0 +1,140 @@
+html {
+  box-sizing: border-box;
+  height: 100vh; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  min-height: 100vh;
+  margin: 0; }
+
+li {
+  margin: 10px 0; }
+
+strong {
+  text-transform: uppercase; }
+
+th, td {
+  text-align: center; }
+
+table {
+  width: 100%; }
+
+.is-hidden {
+  display: none; }
+
+body {
+  background-color: #B30F0A;
+  background-attachment: fixed;
+  font-family: "PT Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  transition: background-color 1s ease; }
+  body.pomodoro {
+    background-color: #B30F0A; }
+  body.break {
+    background-color: #276227; }
+
+.logo {
+  font-size: 2.5em; }
+
+.btn {
+  color: #FFFFFF;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #FFFFFF;
+  border-radius: 2px;
+  opacity: 1;
+  transition: opacity .3s; }
+  .btn:last-of-type {
+    margin-right: 0; }
+  .btn:hover, .btn:active {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1) 90%); }
+  .btn:active {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15) 90%); }
+  .btn:focus {
+    outline: none; }
+  .btn:disabled {
+    transition: opacity .3s;
+    opacity: 0.4;
+    cursor: not-allowed; }
+
+.type-btn {
+  min-width: 224px;
+  display: inline-block;
+  font-size: 22px; }
+
+.timer-countdown {
+  font-size: 5em; }
+
+.control-btn {
+  min-width: 144px;
+  display: inline-block;
+  font-size: 18px; }
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .features-container-heading {
+    text-align: center;
+    margin: 10px 0; }
+  .features-container-block {
+    border-radius: 2px;
+    margin: 1rem;
+    position: relative;
+    height: 100%;
+    width: 300px;
+    padding-bottom: 10px;
+    box-shadow: 0 10px 20px rgba(50, 50, 50, 0.15), 0 6px 6px rgba(50, 50, 50, 0.19);
+    border: 1px solid rgba(50, 50, 50, 0.2); }
+
+.settings-time-heading {
+  text-align: center;
+  margin: 5px 0; }
+
+.settings-time-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .settings-time-controls-btn {
+    background-color: Transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    margin: 0 10px; }
+    .settings-time-controls-btn:active {
+      transform: scale(1.2); }
+  .settings-time-controls-value {
+    margin: 0;
+    font-size: 24px; }
+
+@media only screen and (max-width: 480px) {
+  .hide-mobile {
+    display: none; }
+  .btn {
+    display: block;
+    margin: 5px 0; }
+  .settings {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .features-container-block {
+    border-radius: unset;
+    box-shadow: unset;
+    border: unset; }
+  .settings-time {
+    margin: 0 14px; }
+    .settings-time-controls-btn {
+      margin: 0 10px; } }
+

@@ -1,0 +1,26 @@
+{
+  "background_color": "#B30F0A",
+  "description": "A simple pomodoro timer",
+  "display": "standalone",
+  "theme_color": "#474C4F",
+  "name": "Pomodoro Timer",
+  "short_name": "Pomodoro",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "assets/tomato-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+        "src": "assets/tomato-152.png",
+        "sizes": "152x152",
+        "type": "image/png"
+    },
+    {
+        "src": "assets/tomato-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }
+  ]
+}

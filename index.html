@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="Description" content="PWA pomodoro timer Author: Illia Voloshchuk">
+  <meta name="theme-color" content="#B30F0A"/>
+  <title>Pomodoro Timer</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/tomato-64.png">
+  <link rel="icon" type="image/png" sizes="152x152" href="assets/tomato-152.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/tomato-152.png">
+  <link rel="manifest" href="pomodoro.webmanifest"/>
+<link href="styles.css" rel="stylesheet"></head>
+<body>
+  <h1 class="logo">Pomodoro timer</h1>
+  <button class="btn type-btn" id="change-timer">Change timer</button>
+  <div class="timer">
+    <h2 class="timer-countdown" id="countdown"></h2>
+  </div>
+  <div class="control">
+    <button class="btn control-btn" id="start">Start</button>
+    <button class="btn control-btn" id="stop" disabled>Stop</button>
+    <button class="btn control-btn" id="reset">Reset</button>
+  </div>
+  <div class="features-container">
+    <div class="shortcuts features-container-block hide-mobile">
+      <h3 class="features-container-heading">Keyboard shortcuts:</h3>
+      <ul>
+        <li><strong>space </strong>Start/Stop the timer</li>
+        <li><strong>alt + p </strong>Change timer</li>
+        <li><strong>alt + r </strong>Reset Timer</li>
+      </ul>
+    </div>
+    <!-- <div class="history features-container-block hide-mobile">
+      <h3 class="features-container-heading">History</h3>
+      <table class="data-table">
+        <thead>
+        <tr>
+          <th class="data-table__cell">Start Time</th>
+          <th class="data-table__cell">End Time</th>
+          <th class="data-table__cell">Type</th>
+        </tr>
+        </thead>
+        <tbody class="table-body">
+        </tbody>
+      </table>
+    </div> -->
+    <div class="settings features-container-block" id="settings">
+      <h3 class="features-container-heading hide-mobile">Set custom times</h3>
+      <div class="settings-time" id="session-setting">
+        <h4 class="settings-time-heading">Session Length</h4>
+        <div class="settings-time-controls">
+          <button class="decrement btn settings-time-controls-btn">-</button>
+          <p class="decrement settings-time-controls-value" id="session-length"></p>
+          <button class="increment btn settings-time-controls-btn">+</button>
+        </div>
+      </div>
+      <div class="settings-time" id="break-setting">
+        <h4 class="settings-time-heading">Break Length</h4>
+        <div class="settings-time-controls">
+          <button class="decrement btn settings-time-controls-btn">-</button>
+          <p class="decrement settings-time-controls-value" id="break-length"></p>
+          <button class="increment btn settings-time-controls-btn">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
