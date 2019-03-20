@@ -1,6 +1,6 @@
 # Pomodoro Timer
 
-[Demo](https://iliataboo.github.io/pomodoro/)
+[Demo](https://illiataboo.github.io/pomodoro/)
 
 >The Pomodoro timer is a well-known productivity interval that has been shown to improve your productivity. It gives you a prescribed interval of 25 minutes of work followed by a 5-minute break. See [Wiki](https://en.wikipedia.org/wiki/Pomodoro_Technique).
 
