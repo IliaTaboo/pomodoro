@@ -11,8 +11,7 @@
     "lint": "eslint ./src",
     "lint:watch": "esw --watch",
     "stylelint": "stylelint './src/**/*.css'",
-    "precommit": "npm run lint && npm run stylelint",
-    "prepush": "npm run test"
+    "precommit": "npm run lint && npm run stylelint"
   },
   "repository": {
     "type": "git",
